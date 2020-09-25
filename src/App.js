@@ -1,26 +1,26 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+/** @jsx jsx */
+/** @jsxFrag React.Fragment */
 
-function App() {
+import React, { useEffect, useState, Component } from 'react';
+import './App.css';
+import { jsx, css } from '@emotion/core';
+import GuestListForm from './components/GuestListForm';
+
+export default function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+    <>
+      {' '}
+      <header>
+        <div class="container">
+          <div class="neon">Guest </div>
+          <div class="flux">List</div>
+        </div>
       </header>
-    </div>
+      <main>
+        <div className="List-app">
+          <GuestListForm />
+        </div>
+      </main>
+    </>
   );
 }
-
-export default App;
